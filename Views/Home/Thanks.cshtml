@@ -13,7 +13,7 @@
 </head>
 <body class="text-center">
     <div>
-        <h1>Thank you, @Model?.Name!</h1>
+        <h1>Thank you, @Model?.FirstName @Model?.LastName!</h1>
         @if (Model?.WillAttend == true)
         {
             @:It's great that you're coming.
@@ -25,7 +25,13 @@
             @:but thanks for letting us know.
         }
     </div>
-    Click
-    <a asp-action="ListResponses">here</a> to see who is coming.
+    <br />
+    <div>Submit a new RSVP 
+        <a asp-action="RsvpForm">here</a>.
+    </div>
+    <div>Click
+    <a asp-action="ListResponses">here</a> to see who is coming.</div>
+    <div>Click
+    <a asp-action="ListDeclines">here</a> to see who can't make it.</div>
 </body>
 </html>

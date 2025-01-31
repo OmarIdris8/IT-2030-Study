@@ -16,8 +16,12 @@
     <form asp-action="RsvpForm" method="post" class="m-2">
         <div asp-validation-summary="All"></div>
         <div class="form-group">
-            <label asp-for="Name" class="form-label">Your name:</label>
-            <input asp-for="Name" class="form-control" />
+            <label asp-for="FirstName" class="form-label">Your first name:</label>
+            <input asp-for="FirstName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="form-label">Your last name:</label>
+            <input asp-for="LastName" class="form-control" />
         </div>
         <div class="form-group">
             <label asp-for="Email" class="form-label">Your email:</label>
@@ -26,6 +30,8 @@
         <div class="form-group">
             <label asp-for="Phone" class="form-label">Your phone:</label>
             <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone">
+                xxx-xxx-xxxx</span>
         </div>
         <div class="form-group">
             <label asp-for="WillAttend" class="form-label">
@@ -41,5 +47,13 @@
             Submit RSVP
         </button>
     </form>
+    <div class="text-center">
+        <br />
+        Click
+        <a asp-action="ListResponses">here</a> to see who is coming.
+        <br />
+        Click
+        <a asp-action="ListDeclines">here</a> to see who can't make it.
+    </div>
 </body>
 </html>

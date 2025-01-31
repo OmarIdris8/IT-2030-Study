@@ -36,5 +36,11 @@ namespace PartyInvites.Controllers
             return View(Repository.Responses
                 .Where(r => r.WillAttend == true));
         }
+
+        public ViewResult ListDeclines()
+        {
+            return View(Repository.Responses
+                .Where(r => r.WillAttend == false));
+        }
     }
 }
